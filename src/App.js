@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { letters, status } from './constants'
 import { Keyboard } from './components/Keyboard'
-import answers from './data/answers'
 import words from './data/words'
 
 import { useLocalStorage } from './hooks/useLocalStorage'
@@ -19,8 +18,9 @@ const state = {
 }
 
 const getRandomAnswer = () => {
-  const randomIndex = Math.floor(Math.random() * answers.length)
-  return answers[randomIndex].toUpperCase()
+  const randomIndex = Math.floor(Math.random() * words.length)
+  const answer = words[randomIndex].toUpperCase()
+  return answer;
 }
 
 function App() {
@@ -134,7 +134,7 @@ function App() {
 
   const isValidWord = (word) => {
     if (word.length < 5) return false
-    return words[word.toLowerCase()]
+    return words.includes(word.toLowerCase())
   }
 
   const onEnterPress = () => {
@@ -273,7 +273,7 @@ function App() {
           <button
             type="button"
             onClick={() => setSettingsModalIsOpen(true)}
-            className="p-1 rounded-full"
+            className="p-1"
           >
             <Settings />
           </button>
@@ -283,7 +283,7 @@ function App() {
           <button
             type="button"
             onClick={() => setInfoModalIsOpen(true)}
-            className="p-1 rounded-full"
+            className="p-1"
           >
             <Info />
           </button>
@@ -298,7 +298,7 @@ function App() {
                     rowNumber,
                     colNumber,
                     letter
-                  )} inline-flex items-center font-medium justify-center text-lg w-[14vw] h-[14vw] xs:w-14 xs:h-14 sm:w-20 sm:h-20 rounded-full`}
+                  )} inline-flex items-center font-medium justify-center text-lg w-[14vw] h-[14vw] xs:w-14 xs:h-14 sm:w-20 sm:h-20`}
                 >
                   {letter}
                 </span>

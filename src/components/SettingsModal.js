@@ -43,7 +43,7 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
                 />
               </Switch>
               <Switch.Label as="span" className="ml-3 cursor-pointer">
-                Dark Mode
+                Mode Gelap
               </Switch.Label>
             </Switch.Group>
 
@@ -74,13 +74,13 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
           </div>
           <div className="flex flex-col items-center">
             <div className="mb-4">
-              If you're enjoying this game, you can show your support by{' '}
+              Suka permainan ini? {' '}
               <a
                 href="https://www.buymeacoffee.com/katherinecodes"
                 target="_blank"
                 rel="noreferrer"
               >
-                buying me a coffee
+                 Berikan dukungan untuk pembuat kode awal.
               </a>
               <span className="ml-1 text-xs">💛</span>
             </div>
