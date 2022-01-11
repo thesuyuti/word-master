@@ -17,8 +17,9 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, styles }) => (
         <div className="flex-1 w-full sm:text-base text-sm">
           <h1 className="text-center sm:text-3xl text-2xl">Cara bermain</h1>
           <ul className="list-disc pl-5 block sm:text-base text-sm">
-            <li className="mt-6 mb-2">Kamu diberikan 6 kali kesempatan untuk menebak kata yang benar.</li>
+            <li className="mt-6 mb-2">Kamu diberikan 6 kali kesempatan untuk menebak kata yang benar dalam Bahasa Indonesia.</li>
             <li className="mb-2">Setiap tebakan harus berupa kata yang memiliki arti.</li>
+            <li className="mb-2">Bila kata yang dimasukkan tidak memiliki arti, maka kotak akan diberi garis merah disekelilingnya.</li>
             <li className="mb-2">
               Setelah setiap tebakan, setiap huruf akan berubah warna menjadi hijau, kuning, atau abu-abu.
             </li>
